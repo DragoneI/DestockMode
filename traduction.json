@@ -1,0 +1,338 @@
+{
+  "fr": {
+    "nav": {
+      "home": "Accueil",
+      "women": "Femme",
+      "men": "Homme",
+      "kids": "Enfant",
+      "collection": "Collection"
+    },
+    "hero": {
+      "label": "Déstockage Premium",
+      "title": "Grandes marques européennes à prix d'exception",
+      "subtitle": "Découvrez notre sélection de surplus de stock neuf avec étiquette. Jusqu'à -70% sur les plus grandes marques.",
+      "cta": "Découvrir la collection",
+      "stat1_label": "Réduction max",
+      "stat2_label": "Authentique",
+      "stat3_label": "Avec étiquette"
+    },
+    "categories": {
+      "label": "Nos Univers",
+      "title": "Parcourir par catégorie",
+      "subtitle": "Une sélection rigoureuse de pièces uniques en déstockage",
+      "men": "Homme",
+      "men_desc": "Élégance masculine",
+      "men_discount": "Jusqu'à -60%",
+      "women": "Femme",
+      "women_desc": "Mode féminine",
+      "women_discount": "Jusqu'à -65%",
+      "kids": "Enfant",
+      "kids_desc": "Petites tenues",
+      "kids_discount": "Jusqu'à -70%"
+    },
+    "featured": {
+      "label": "Sélection",
+      "title": "Nos coups de cœur",
+      "subtitle": "Les pièces les plus demandées de notre collection actuelle",
+      "cta": "Voir toute la collection"
+    },
+    "whyUs": {
+      "label": "Nos engagements",
+      "title": "Pourquoi nous choisir ?",
+      "subtitle": "La qualité premium accessible grâce au déstockage",
+      "feature1_title": "100% Authentique",
+      "feature1_desc": "Chaque produit est vérifié et certifié par nos experts qualité",
+      "feature2_title": "Neuf avec étiquette",
+      "feature2_desc": "Jamais porté, dans son emballage d'origine avec étiquettes",
+      "feature3_title": "Importé d'Europe",
+      "feature3_desc": "Surplus de stock directement issus des grandes maisons",
+      "feature4_title": "Prix d'exception",
+      "feature4_desc": "Jusqu'à -70% sur les collections des saisons passées"
+    },
+    "products": {
+      "page_title": "Toute la collection",
+      "filters": {
+        "all": "Tous",
+        "women": "Femme",
+        "men": "Homme",
+        "kids": "Enfant",
+        "promo": "-50% et plus"
+      },
+      "stock_warning": "Plus que {stock} en stock",
+      "badge_new": "New",
+      "badge_stock": "Limité",
+      "no_restock": "Ce produit ne sera pas réapprovisionné",
+      "add_to_cart": "Ajouter au panier",
+      "authentic": "Produit 100% authentique",
+      "authentic_desc": "Vérifié par nos experts • Importé d'Europe • Neuf avec étiquettes",
+      "description": "Description",
+      "description_text": "Produit neuf avec étiquette, issu de surplus de stock de grandes marques européennes. Cet article provient d'invendus de boutiques et de collections passées, jamais porté et dans son emballage d'origine. Qualité premium garantie à prix déstocké.",
+      "save": "Économisez {amount}€",
+      "left_stock": "Plus que {stock} exemplaires"
+    },
+    "cart": {
+      "title": "Votre panier",
+      "empty": "Votre panier est vide",
+      "savings": "Vous économisez {amount}€",
+      "total": "Total TTC",
+      "checkout": "Finaliser la commande",
+      "secure": "Paiement 100% sécurisé",
+      "added": "Produit ajouté",
+      "added_text": "{qty} {product} ajouté au panier",
+      "updated": "Quantité mise à jour",
+      "updated_text": "{qty} {product} dans votre panier",
+      "removed": "Produit retiré",
+      "removed_text": "Le produit a été supprimé de votre panier",
+      "stock_error": "Stock insuffisant",
+      "stock_error_text": "La quantité demandée dépasse le stock disponible"
+    },
+    "footer": {
+      "brand_desc": "Votre destination privilégiée pour le déstockage de grandes marques européennes. Qualité premium, prix exceptionnels.",
+      "explore": "Explorer",
+      "home": "Accueil",
+      "collection": "Collection",
+      "new": "Nouveautés",
+      "bestsellers": "Best-sellers",
+      "help": "Aide",
+      "delivery": "Livraison",
+      "returns": "Retours",
+      "size_guide": "Guide tailles",
+      "contact": "Contact",
+      "legal": "Légal",
+      "terms": "CGV",
+      "privacy": "Confidentialité",
+      "legal_notice": "Mentions légales",
+      "copyright": "Tous droits réservés",
+      "footer_text": "Déstockage de surplus de stock • Produits 100% neufs et authentiques"
+    },
+    "notifications": {
+      "welcome": "Bienvenue au Maroc",
+      "welcome_text": "Vous avez accès à toute la collection DestockMode !"
+    },
+    "search": "Rechercher"
+  },
+  "en": {
+    "nav": {
+      "home": "Home",
+      "women": "Women",
+      "men": "Men",
+      "kids": "Kids",
+      "collection": "Collection"
+    },
+    "hero": {
+      "label": "Premium Clearance",
+      "title": "European luxury brands at exceptional prices",
+      "subtitle": "Discover our selection of new stock surplus with tags. Up to -70% off on major brands.",
+      "cta": "Discover the collection",
+      "stat1_label": "Max discount",
+      "stat2_label": "Authentic",
+      "stat3_label": "With tags"
+    },
+    "categories": {
+      "label": "Our Worlds",
+      "title": "Browse by category",
+      "subtitle": "A rigorous selection of unique clearance pieces",
+      "men": "Men",
+      "men_desc": "Masculine elegance",
+      "men_discount": "Up to -60%",
+      "women": "Women",
+      "women_desc": "Women's fashion",
+      "women_discount": "Up to -65%",
+      "kids": "Kids",
+      "kids_desc": "Little outfits",
+      "kids_discount": "Up to -70%"
+    },
+    "featured": {
+      "label": "Selection",
+      "title": "Our favorites",
+      "subtitle": "The most requested pieces from our current collection",
+      "cta": "View all collection"
+    },
+    "whyUs": {
+      "label": "Our commitments",
+      "title": "Why choose us?",
+      "subtitle": "Premium quality accessible through clearance",
+      "feature1_title": "100% Authentic",
+      "feature1_desc": "Every product is verified and certified by our quality experts",
+      "feature2_title": "New with tags",
+      "feature2_desc": "Never worn, in original packaging with tags",
+      "feature3_title": "Imported from Europe",
+      "feature3_desc": "Stock surplus directly from major houses",
+      "feature4_title": "Exceptional prices",
+      "feature4_desc": "Up to -70% on past season collections"
+    },
+    "products": {
+      "page_title": "Full collection",
+      "filters": {
+        "all": "All",
+        "women": "Women",
+        "men": "Men",
+        "kids": "Kids",
+        "promo": "-50% and more"
+      },
+      "stock_warning": "Only {stock} left in stock",
+      "badge_new": "New",
+      "badge_stock": "Limited",
+      "no_restock": "This product will not be restocked",
+      "add_to_cart": "Add to cart",
+      "authentic": "100% authentic product",
+      "authentic_desc": "Verified by our experts • Imported from Europe • New with tags",
+      "description": "Description",
+      "description_text": "New product with tags, from stock surplus of major European brands. This item comes from unsold boutique items and past collections, never worn and in its original packaging. Premium quality guaranteed at clearance prices.",
+      "save": "Save {amount}€",
+      "left_stock": "Only {stock} left"
+    },
+    "cart": {
+      "title": "Your cart",
+      "empty": "Your cart is empty",
+      "savings": "You save {amount}€",
+      "total": "Total incl. tax",
+      "checkout": "Checkout",
+      "secure": "100% secure payment",
+      "added": "Product added",
+      "added_text": "{qty} {product} added to cart",
+      "updated": "Quantity updated",
+      "updated_text": "{qty} {product} in your cart",
+      "removed": "Product removed",
+      "removed_text": "The product has been removed from your cart",
+      "stock_error": "Insufficient stock",
+      "stock_error_text": "The requested quantity exceeds available stock"
+    },
+    "footer": {
+      "brand_desc": "Your premier destination for clearance of major European brands. Premium quality, exceptional prices.",
+      "explore": "Explore",
+      "home": "Home",
+      "collection": "Collection",
+      "new": "New arrivals",
+      "bestsellers": "Best-sellers",
+      "help": "Help",
+      "delivery": "Delivery",
+      "returns": "Returns",
+      "size_guide": "Size guide",
+      "contact": "Contact",
+      "legal": "Legal",
+      "terms": "Terms",
+      "privacy": "Privacy",
+      "legal_notice": "Legal notice",
+      "copyright": "All rights reserved",
+      "footer_text": "Stock surplus clearance • 100% new and authentic products"
+    },
+    "notifications": {
+      "welcome": "Welcome to Morocco",
+      "welcome_text": "You have access to the entire DestockMode collection!"
+    },
+    "search": "Search"
+  },
+  "ar": {
+    "nav": {
+      "home": "الرئيسية",
+      "women": "نسائي",
+      "men": "رجالي",
+      "kids": "أطفال",
+      "collection": "المجموعة"
+    },
+    "hero": {
+      "label": "تخفيضات فاخرة",
+      "title": "ماركات أوروبية كبرى بأسعار استثنائية",
+      "subtitle": "اكتشف مجموعتنا من فائض المخزون الجديد مع البطاقات. خصومات تصل إلى -70٪ على كبرى الماركات.",
+      "cta": "اكتشف المجموعة",
+      "stat1_label": "أقصى خصم",
+      "stat2_label": "أصلي",
+      "stat3_label": "مع البطاقة"
+    },
+    "categories": {
+      "label": "عوالمنا",
+      "title": "تصفح حسب الفئة",
+      "subtitle": "اختيار دقيق لقطع التخفيضات الفريدة",
+      "men": "رجالي",
+      "men_desc": "أناقة رجالية",
+      "men_discount": "خصم يصل إلى -60٪",
+      "women": "نسائي",
+      "women_desc": "أزياء نسائية",
+      "women_discount": "خصم يصل إلى -65٪",
+      "kids": "أطفال",
+      "kids_desc": "ملابس صغيرة",
+      "kids_discount": "خصم يصل إلى -70٪"
+    },
+    "featured": {
+      "label": "اختيارنا",
+      "title": "المفضلة لدينا",
+      "subtitle": "القطع الأكثر طلبًا من مجموعتنا الحالية",
+      "cta": "عرض المجموعة كاملة"
+    },
+    "whyUs": {
+      "label": "التزاماتنا",
+      "title": "لماذا تختارنا؟",
+      "subtitle": "جودة فاخرة متاحة من خلال التخفيضات",
+      "feature1_title": "أصلي 100٪",
+      "feature1_desc": "كل منتج يتم التحقق منه واعتماده من قبل خبراء الجودة لدينا",
+      "feature2_title": "جديد مع البطاقة",
+      "feature2_desc": "لم يُلبس أبدًا، في عبوته الأصلية مع البطاقات",
+      "feature3_title": "مستورد من أوروبا",
+      "feature3_desc": "فائض المخزون مباشرة من البيوت الكبرى",
+      "feature4_title": "أسعار استثنائية",
+      "feature4_desc": "خصم يصل إلى -70٪ على مجموعات المواسم الماضية"
+    },
+    "products": {
+      "page_title": "المجموعة كاملة",
+      "filters": {
+        "all": "الكل",
+        "women": "نسائي",
+        "men": "رجالي",
+        "kids": "أطفال",
+        "promo": "-50٪ وأكثر"
+      },
+      "stock_warning": "فقط {stock} متبقي في المخزون",
+      "badge_new": "جديد",
+      "badge_stock": "محدود",
+      "no_restock": "لن يتم إعادة تخزين هذا المنتج",
+      "add_to_cart": "أضف إلى السلة",
+      "authentic": "منتج أصلي 100٪",
+      "authentic_desc": "تم التحقق من قبل خبرائنا • مستورد من أوروبا • جديد مع البطاقات",
+      "description": "الوصف",
+      "description_text": "منتج جديد مع البطاقة، من فائض المخزون من الماركات الأوروبية الكبرى. هذا العنصر يأتي من بضائع المتاجر غير المباعة والمجموعات السابقة، لم يُلبس أبدًا وفي عبوته الأصلية. جودة فاخرة مضمونة بأسعار التخفيضات.",
+      "save": "وفر {amount}€",
+      "left_stock": "فقط {stock} متبقي"
+    },
+    "cart": {
+      "title": "سلة التسوق",
+      "empty": "سلة التسوق فارغة",
+      "savings": "توفر {amount}€",
+      "total": "المجموع شامل الضريبة",
+      "checkout": "إتمام الشراء",
+      "secure": "دفع آمن 100٪",
+      "added": "تمت إضافة المنتج",
+      "added_text": "تمت إضافة {qty} {product} إلى السلة",
+      "updated": "تم تحديث الكمية",
+      "updated_text": "{qty} {product} في سلتك",
+      "removed": "تمت إزالة المنتج",
+      "removed_text": "تمت إزالة المنتج من سلتك",
+      "stock_error": "مخزون غير كاف",
+      "stock_error_text": "الكمية المطلوبة تتجاوز المخزون المتاح"
+    },
+    "footer": {
+      "brand_desc": "وجهتك المفضلة لتخفيضات الماركات الأوروبية الكبرى. جودة فاخرة، أسعار استثنائية.",
+      "explore": "استكشف",
+      "home": "الرئيسية",
+      "collection": "المجموعة",
+      "new": "الوافدون الجدد",
+      "bestsellers": "الأكثر مبيعاً",
+      "help": "المساعدة",
+      "delivery": "التوصيل",
+      "returns": "الإرجاع",
+      "size_guide": "دليل المقاسات",
+      "contact": "اتصل بنا",
+      "legal": "قانوني",
+      "terms": "الشروط والأحكام",
+      "privacy": "الخصوصية",
+      "legal_notice": "إشعار قانوني",
+      "copyright": "جميع الحقوق محفوظة",
+      "footer_text": "تخفيضات فائض المخزون • منتجات جديدة وأصلية 100٪"
+    },
+    "notifications": {
+      "welcome": "مرحباً بكم في المغرب",
+      "welcome_text": "لديك حق الوصول إلى مجموعة DestockMode بأكملها!"
+    },
+    "search": "بحث"
+  }
+}
