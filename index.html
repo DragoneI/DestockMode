@@ -1,0 +1,730 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nex Prime — Grandes Marques à Prix Imbattables</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="logo1.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="logo1.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="logo1.png">
+    <link rel="shortcut icon" type="image/png" href="logo1.png">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+    
+ <link rel="stylesheet" href="style.css">
+ 
+</head>
+<body>
+
+    <!-- MODALE PAYS -->
+    <div id="countryModal" class="country-modal">
+        <div class="modal-card">
+            <div class="modal-top">
+                <div class="modal-logo-wrapper">
+                    <img src="logo.svg" alt="Nex Prime" class="modal-logo">
+                </div>
+                <h2 id="modalWelcome">Bienvenue sur Nex Prime</h2>
+                <p id="modalSelectCountry">Sélectionnez votre pays de livraison pour continuer</p>
+            </div>
+            <div class="modal-body">
+                <label for="countrySelect" id="modalLabelCountry">Votre pays</label>
+                <select id="countrySelect" class="country-select">
+                    <option value="">— <span id="modalPlaceholder">Sélectionnez votre pays</span> —</option>
+                    <option value="maroc">🇲🇦 Maroc</option>
+                    <option value="france">🇫🇷 France</option>
+                    <option value="belgique">🇧🇪 Belgique</option>
+                    <option value="suisse">🇨🇭 Suisse</option>
+                    <option value="canada">🇨🇦 Canada</option>
+                    <option value="espagne">🇪🇸 Espagne</option>
+                    <option value="italie">🇮🇹 Italie</option>
+                    <option value="allemagne">🇩🇪 Allemagne</option>
+                    <option value="tunisie">🇹🇳 Tunisie</option>
+                    <option value="algerie">🇩🇿 Algérie</option>
+                </select>
+                <button id="validateBtn" class="validate-btn"><i class="fas fa-arrow-right"></i> <span id="modalAccessBtn">Accéder au site</span></button>
+                <div id="modalError" class="modal-error"><i class="fas fa-exclamation-circle"></i> <span id="modalErrorText">Veuillez sélectionner un pays</span></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ZONE ERREUR -->
+    <div id="zoneErrorOverlay" class="zone-error-overlay">
+        <div class="zone-error-card">
+            <div class="ban-icon"><i class="fas fa-ban"></i></div>
+            <h3 id="zoneErrorTitle">Zone non disponible</h3>
+            <p id="zoneErrorDesc">Nex Prime livre uniquement au <strong>Maroc</strong> pour le moment.<br>Nous travaillons à étendre nos livraisons à d'autres pays.</p>
+            <button id="closeZoneBtn" class="back-btn"><i class="fas fa-arrow-left"></i> <span id="zoneErrorBack">Changer de pays</span></button>
+        </div>
+    </div>
+
+    <!-- CONTENU PRINCIPAL -->
+    <div id="mainContent" class="main-content">
+
+        <!-- HEADER -->
+        <header>
+            <div class="header-inner">
+                <button class="mobile-menu-btn" id="mobileMenuBtn"><i class="fas fa-bars"></i></button>
+                <a href="#" id="logoLink" class="logo-link"><img src="logo.svg" alt="Nex Prime" class="logo-img"></a>
+                <nav class="desktop-nav">
+                    <a href="#" id="navHome">Accueil</a>
+                    <a href="#" id="navWomen">Femme</a>
+                    <a href="#" id="navMen">Homme</a>
+                    <a href="#" id="navKids">Enfant</a>
+                    <a href="#" id="navCollection">Collection</a>
+                </nav>
+                <div class="header-actions">
+                    <div class="lang-selector">
+                        <button class="lang-btn"><i class="fas fa-globe"></i> <span id="currentLangLabel">FR</span></button>
+                        <div class="lang-dropdown">
+                            <div class="lang-option" data-lang="fr">🇫🇷 Français</div>
+                            <div class="lang-option" data-lang="en">🇬🇧 English</div>
+                            <div class="lang-option" data-lang="ar">🇲🇦 العربية</div>
+                        </div>
+                    </div>
+                    <button class="icon-btn" id="searchBtn"><i class="fas fa-search"></i></button>
+                    <button class="icon-btn" id="cartBtn"><i class="fas fa-shopping-bag"></i><span id="cartCount" class="cart-badge">0</span></button>
+                </div>
+            </div>
+        </header>
+
+        <!-- MOBILE MENU -->
+        <div id="mobileMenu" class="mobile-menu">
+            <div class="mobile-menu-header">
+                <a href="#" class="mobile-menu-logo-link"><img src="logo.svg" alt="Nex Prime" class="logo-img"></a>
+                <button id="closeMobileMenuBtn" class="close-mobile-btn"><i class="fas fa-times"></i></button>
+            </div>
+            <nav class="mobile-nav">
+                <a href="#" id="mobileNavHome"><i class="fas fa-home"></i> <span id="mobileNavHomeText">Accueil</span></a>
+                <a href="#" id="mobileNavWomen"><i class="fas fa-female"></i> <span id="mobileNavWomenText">Femme</span></a>
+                <a href="#" id="mobileNavMen"><i class="fas fa-male"></i> <span id="mobileNavMenText">Homme</span></a>
+                <a href="#" id="mobileNavKids"><i class="fas fa-child"></i> <span id="mobileNavKidsText">Enfant</span></a>
+                <a href="#" id="mobileNavCart"><i class="fas fa-shopping-bag"></i> <span id="mobileNavCartText">Panier</span></a>
+            </nav>
+        </div>
+
+        <!-- PAGE ACCUEIL -->
+        <div id="page-home" class="page">
+            <section class="hero">
+                <div class="hero-bg"></div><div class="hero-gradient"></div><div class="hero-blob"></div>
+                <div class="hero-content">
+                    <div class="hero-eyebrow"><i class="fas fa-gem"></i> <span id="heroLabel">Déstockage Premium</span></div>
+                    <h1 id="heroTitle">Grandes marques<br><span>à prix imbattables</span></h1>
+                    <p class="hero-subtitle" id="heroSubtitle">Surplus de stock neuf avec étiquette. Jusqu'à -70% sur les plus grandes marques européennes.</p>
+                    <div class="hero-actions">
+                        <a href="#" id="heroCta" class="btn-primary">Découvrir la collection <i class="fas fa-arrow-right"></i></a>
+                        <a href="#" id="heroSecondary" class="btn-secondary"><i class="fas fa-tag"></i> <span id="heroSecondaryLabel">Voir les promotions</span></a>
+                    </div>
+                    <div class="hero-stats">
+                        <div class="stat-item"><span class="stat-number">-70%</span><span class="stat-label" id="stat1Label">Réduction max</span></div>
+                        <div class="stat-item"><span class="stat-number">100%</span><span class="stat-label" id="stat2Label">Authentique</span></div>
+                        <div class="stat-item"><span class="stat-number">Neuf</span><span class="stat-label" id="stat3Label">Avec étiquette</span></div>
+                    </div>
+                </div>
+            </section>
+
+            <div class="promo-banner" id="promoBanner">
+                <div class="banner-track" id="bannerTrack">
+                    <span class="banner-item" data-banner="delivery"><i class="fas fa-truck"></i> Livraison rapide au Maroc</span>
+                    <span class="banner-item" data-banner="authentic"><i class="fas fa-shield-alt"></i> Produits 100% authentiques</span>
+                    <span class="banner-item" data-banner="discount"><i class="fas fa-tag"></i> Jusqu'à -70% de réduction</span>
+                    <span class="banner-item" data-banner="brands"><i class="fas fa-star"></i> Grandes marques européennes</span>
+                    <span class="banner-item" data-banner="delivery"><i class="fas fa-truck"></i> Livraison rapide au Maroc</span>
+                    <span class="banner-item" data-banner="authentic"><i class="fas fa-shield-alt"></i> Produits 100% authentiques</span>
+                    <span class="banner-item" data-banner="discount"><i class="fas fa-tag"></i> Jusqu'à -70% de réduction</span>
+                    <span class="banner-item" data-banner="brands"><i class="fas fa-star"></i> Grandes marques européennes</span>
+                </div>
+            </div>
+
+            <div class="section">
+                <div class="section-header">
+                    <div class="section-tag" id="categoriesLabel">Nos Univers</div>
+                    <h2 class="section-title" id="categoriesTitle">Parcourir par catégorie</h2>
+                    <p class="section-subtitle" id="categoriesSubtitle">Une sélection rigoureuse de pièces uniques en déstockage</p>
+                </div>
+                <div class="categories-grid">
+                    <div class="cat-card" id="categoryMen"><img src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?w=600&h=450&fit=crop" alt="Homme"><div class="cat-overlay"></div><div class="cat-content"><div class="cat-label" id="catMenDiscount">Jusqu'à -60%</div><div class="cat-title" id="catMenTitle">Homme</div><div class="cat-desc" id="catMenDesc">Élégance masculine</div></div><div class="cat-arrow"><i class="fas fa-arrow-right"></i></div></div>
+                    <div class="cat-card" id="categoryWomen"><img src="https://images.unsplash.com/photo-1618354691373-d851c5c3a990?w=600&h=450&fit=crop" alt="Femme"><div class="cat-overlay"></div><div class="cat-content"><div class="cat-label" id="catWomenDiscount">Jusqu'à -65%</div><div class="cat-title" id="catWomenTitle">Femme</div><div class="cat-desc" id="catWomenDesc">Mode féminine</div></div><div class="cat-arrow"><i class="fas fa-arrow-right"></i></div></div>
+                    <div class="cat-card" id="categoryKids"><img src="https://images.unsplash.com/photo-1519238263530-99bdd11df2ea?w=600&h=450&fit=crop" alt="Enfant"><div class="cat-overlay"></div><div class="cat-content"><div class="cat-label" id="catKidsDiscount">Jusqu'à -70%</div><div class="cat-title" id="catKidsTitle">Enfant</div><div class="cat-desc" id="catKidsDesc">Petites tenues</div></div><div class="cat-arrow"><i class="fas fa-arrow-right"></i></div></div>
+                </div>
+            </div>
+
+            <div class="section" style="padding-top:0;">
+                <div class="section-header"><div class="section-tag" id="featuredLabel">Sélection</div><h2 class="section-title" id="featuredTitle">Nos coups de cœur</h2><p class="section-subtitle" id="featuredSubtitle">Les pièces les plus demandées</p></div>
+                <div id="popularProducts" class="products-grid"></div>
+                <div style="text-align:center;margin-top:36px;"><a href="#" id="featuredCta" class="btn-primary">Voir toute la collection <i class="fas fa-arrow-right"></i></a></div>
+            </div>
+
+            <div class="why-section">
+                <div class="why-inner">
+                    <div class="section-header center"><div class="section-tag" id="whyUsLabel">Nos engagements</div><h2 class="section-title" id="whyUsTitle">Pourquoi nous choisir ?</h2><p class="section-subtitle" id="whyUsSubtitle">La qualité premium accessible grâce au déstockage</p></div>
+                    <div class="features-grid">
+                        <div class="feature-card"><div class="feature-icon"><i class="fas fa-certificate"></i></div><div class="feature-title" id="feature1Title">100% Authentique</div><div class="feature-desc" id="feature1Desc">Chaque produit est vérifié et certifié par nos experts qualité</div></div>
+                        <div class="feature-card"><div class="feature-icon"><i class="fas fa-tag"></i></div><div class="feature-title" id="feature2Title">Neuf avec étiquette</div><div class="feature-desc" id="feature2Desc">Jamais porté, dans son emballage d'origine avec étiquettes</div></div>
+                        <div class="feature-card"><div class="feature-icon"><i class="fas fa-plane"></i></div><div class="feature-title" id="feature3Title">Importé d'Europe</div><div class="feature-desc" id="feature3Desc">Surplus de stock directement issus des grandes maisons</div></div>
+                        <div class="feature-card"><div class="feature-icon"><i class="fas fa-percent"></i></div><div class="feature-title" id="feature4Title">Prix d'exception</div><div class="feature-desc" id="feature4Desc">Jusqu'à -70% sur les collections des saisons passées</div></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- PAGE COLLECTION -->
+        <div id="page-products" class="page hidden">
+            <div class="collection-header">
+                <div class="collection-header-inner">
+                    <div class="page-title" id="pageTitle">Toute la collection</div>
+                    <div class="filters-row" id="filtersContainer">
+                        <button class="filter-btn active" data-filter="all"><i class="fas fa-th"></i> <span>Tous</span></button>
+                        <button class="filter-btn" data-filter="femme"><i class="fas fa-female"></i> <span>Femme</span></button>
+                        <button class="filter-btn" data-filter="homme"><i class="fas fa-male"></i> <span>Homme</span></button>
+                        <button class="filter-btn" data-filter="enfant"><i class="fas fa-child"></i> <span>Enfant</span></button>
+                        <button class="filter-btn" data-filter="promo"><i class="fas fa-fire"></i> <span>-50% et plus</span></button>
+                    </div>
+                </div>
+            </div>
+            <div class="products-container"><div id="allProducts" class="products-grid"></div></div>
+        </div>
+
+        <!-- PAGE DÉTAIL PRODUIT -->
+        <div id="page-product-detail" class="page hidden">
+            <div class="detail-container">
+                <div class="breadcrumb"><a href="#" id="breadcrumbHome"><i class="fas fa-home"></i> <span id="breadcrumbHomeText">Accueil</span></a><i class="fas fa-chevron-right"></i><a href="#" id="breadcrumbCollection"><span id="breadcrumbCollectionText">Collection</span></a><i class="fas fa-chevron-right"></i><span id="breadcrumbProduct">Produit</span></div>
+                <div id="productDetail" class="detail-grid"></div>
+            </div>
+        </div>
+
+        <!-- PANIER -->
+        <div id="cartOverlay" class="cart-overlay"></div>
+        <div id="cartSidebar" class="cart-sidebar">
+            <div class="cart-header"><h2 id="cartTitle">Votre panier</h2><button id="closeCartBtn" class="close-cart-btn"><i class="fas fa-times"></i></button></div>
+            <div id="cartItemsList" class="cart-items-list"><div class="cart-empty"><i class="fas fa-shopping-bag"></i><p id="cartEmptyText">Votre panier est vide</p></div></div>
+            <div id="cartFooter" class="cart-footer" style="display:none;">
+                <div class="cart-savings-row"><span id="cartSavingsLabel">Économies :</span><span id="cartSavingsText">0€</span></div>
+                <div class="cart-total-row"><span class="cart-total-label" id="cartTotalLabel">Total TTC</span><span class="cart-total-amount" id="cartTotal">0€</span></div>
+                <button class="checkout-btn" id="checkoutBtn"><i class="fas fa-lock"></i> <span id="checkoutBtnText">Finaliser la commande</span></button>
+                <div class="secure-note"><i class="fas fa-shield-alt" style="color:var(--cyan);"></i> <span id="secureNote">Paiement à la livraison · 100% sécurisé</span></div>
+            </div>
+        </div>
+
+        <!-- MODALE COMMANDE -->
+        <div id="orderModalOverlay" class="order-modal-overlay">
+            <div class="order-modal" id="orderModal">
+                <div class="order-modal-header">
+                    <h3><i class="fas fa-clipboard-list"></i> <span id="orderModalTitle">Passer commande</span></h3>
+                    <button class="close-order-modal" id="closeOrderModalBtn"><i class="fas fa-times"></i></button>
+                </div>
+                <div id="orderFormStep" class="order-modal-body">
+                    <div class="order-recap">
+                        <div class="order-recap-title" id="recapTitle">Récapitulatif</div>
+                        <div id="orderRecapItems"></div>
+                        <div class="order-total-row"><span class="order-total-label" id="orderTotalLabel">Total à payer</span><span class="order-total-amount" id="orderTotalAmount">0€</span></div>
+                    </div>
+                    <div class="delivery-note"><i class="fas fa-info-circle"></i> <span id="deliveryNoteText">Paiement à la livraison uniquement. Vous payez en cash à la réception de votre colis.</span></div>
+                    <div class="form-section-title"><i class="fas fa-user"></i> <span id="formSectionCoords">Vos coordonnées</span></div>
+                    <div class="form-grid">
+                        <div class="form-group"><label id="labelFirstNameGroup"><span id="labelFirstName">Prénom</span> <span>*</span></label><input type="text" id="fieldFirstName" class="form-input" placeholder="Mohamed"><div class="form-error-msg" id="errFirstName">Champ requis</div></div>
+                        <div class="form-group"><label id="labelLastNameGroup"><span id="labelLastName">Nom</span> <span>*</span></label><input type="text" id="fieldLastName" class="form-input" placeholder="Alami"><div class="form-error-msg" id="errLastName">Champ requis</div></div>
+                    </div>
+                    <div class="form-group"><label id="labelPhoneGroup"><span id="labelPhone">Téléphone</span> <span>*</span></label><input type="tel" id="fieldPhone" class="form-input" placeholder="06 XX XX XX XX"><div class="form-error-msg" id="errPhone">Numéro invalide</div></div>
+                    <div class="form-section-title" style="margin-top:20px;"><i class="fas fa-map-marker-alt"></i> <span id="formSectionAddress">Adresse de livraison</span></div>
+                    <div class="form-group"><label id="labelCityGroup"><span id="labelCity">Ville</span> <span>*</span></label><input type="text" id="fieldCity" class="form-input" placeholder="Casablanca"><div class="form-error-msg" id="errCity">Champ requis</div></div>
+                    <div class="form-group"><label id="labelAddressGroup"><span id="labelAddress">Adresse complète</span> <span>*</span></label><input type="text" id="fieldAddress" class="form-input" placeholder="N°12 Rue des Roses, Quartier ..."><div class="form-error-msg" id="errAddress">Champ requis</div></div>
+                    <div class="form-group"><label id="labelNotesGroup"><span id="labelNotes">Notes / Instructions (optionnel)</span></label><input type="text" id="fieldNotes" class="form-input" placeholder="Bâtiment A, 3ème étage..."></div>
+                    <button class="submit-order-btn" id="submitOrderBtn"><i class="fas fa-check-circle"></i> <span id="submitOrderBtnText">Confirmer la commande</span></button>
+                </div>
+                <div id="orderConfirmStep" class="order-confirmation">
+                    <div class="check-icon"><i class="fas fa-check"></i></div>
+                    <h3 id="confirmTitle">Commande confirmée !</h3>
+                    <p><span id="confirmThanks">Merci</span> <strong id="confirmName"></strong>, <span id="confirmMessage">votre commande a bien été enregistrée.</span></p>
+                    <p id="confirmContact">Notre équipe vous contactera sous <strong>24h</strong> pour confirmer la livraison.</p>
+                    <div class="order-number" id="confirmOrderNumber">NP-000000</div>
+                    <p style="font-size:13px;color:var(--muted);margin-bottom:16px;" id="confirmWhatsappHint">Envoyez votre commande via WhatsApp pour un traitement plus rapide :</p>
+                    <a href="#" id="whatsappBtn" class="whatsapp-btn" target="_blank" rel="noopener"><i class="fab fa-whatsapp" style="font-size:20px;"></i> <span id="whatsappBtnText">Envoyer sur WhatsApp</span></a>
+                    <button class="close-confirmation-btn" id="closeConfirmBtn"><i class="fas fa-arrow-left"></i> <span id="closeConfirmBtnText">Retour à la boutique</span></button>
+                </div>
+            </div>
+        </div>
+
+        <!-- FOOTER -->
+        <footer>
+            <div class="footer-inner">
+                <div class="footer-grid">
+                    <div class="footer-brand">
+                        <a href="#" class="footer-logo-link"><img src="logo.svg" alt="Nex Prime" class="logo-img"></a>
+                        <p id="footerBrandDesc">Votre destination privilégiée pour le déstockage de grandes marques européennes.</p>
+                    </div>
+                    <div class="footer-col"><h4 id="footerExplore">Explorer</h4><ul><li><a href="#" id="footerHome"><span id="footerHomeText">Accueil</span></a></li><li><a href="#" id="footerCollection"><span id="footerCollectionText">Collection</span></a></li><li><a href="#"><span id="footerNew">Nouveautés</span></a></li><li><a href="#"><span id="footerBestsellers">Best-sellers</span></a></li></ul></div>
+                    <div class="footer-col"><h4 id="footerHelp">Aide</h4><ul><li><a href="#"><span id="footerDelivery">Livraison</span></a></li><li><a href="#"><span id="footerReturns">Retours</span></a></li><li><a href="#"><span id="footerSizeGuide">Guide tailles</span></a></li><li><a href="#"><span id="footerContact">Contact</span></a></li></ul></div>
+                    <div class="footer-col"><h4 id="footerLegal">Légal</h4><ul><li><a href="#"><span id="footerTerms">CGV</span></a></li><li><a href="#"><span id="footerPrivacy">Confidentialité</span></a></li><li><a href="#"><span id="footerLegalNotice">Mentions légales</span></a></li></ul></div>
+                </div>
+                <div class="footer-bottom">
+                    <p>© 2026 Nex Prime. <span id="footerCopyright">Tous droits réservés.</span></p>
+                    <div class="footer-badges"><span class="footer-badge"><i class="fas fa-check-circle"></i> <span id="footerBadgeAuth">100% Authentique</span></span><span class="footer-badge"><i class="fas fa-shield-alt"></i> <span id="footerBadgePayment">Paiement à la livraison</span></span></div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- NOTIFICATION -->
+    <div id="notification" class="notification success"><div class="notif-icon"><i class="fas fa-check"></i></div><div><div class="notif-title" id="notifTitle">Succès</div><div class="notif-msg" id="notifText"></div></div></div>
+
+    <!-- ===== SCRIPT COMPLET CORRIGÉ ===== -->
+    <script>
+        const WHATSAPP_NUMBER = '212644006421';
+
+        const products = [
+            { id:1, name:"Robe midi fluide à imprimé floral", brand:"Sandro", category:"femme", oldPrice:245, newPrice:98, stock:3, image:"https://images.unsplash.com/photo-1618354691373-d851c5c3a990?w=400&h=600&fit=crop", badge:"-60%", isNew:true },
+            { id:2, name:"Blazer slim fit en laine vierge", brand:"Hugo Boss", category:"homme", oldPrice:399, newPrice:159, stock:5, image:"https://images.unsplash.com/photo-1507679799987-c73779587ccf?w=400&h=600&fit=crop", badge:"-60%", isNew:false },
+            { id:3, name:"Sneakers Campo chromefree", brand:"Veja", category:"femme", oldPrice:120, newPrice:72, stock:8, image:"https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=400&h=600&fit=crop", badge:"-40%", isNew:true },
+            { id:4, name:"Manteau long en cachemire", brand:"Max Mara", category:"femme", oldPrice:890, newPrice:267, stock:2, image:"https://images.unsplash.com/photo-1539533018447-63fcce2678e3?w=400&h=600&fit=crop", badge:"-70%", isNew:false },
+            { id:5, name:"Costume complet bleu marine", brand:"Celio", category:"homme", oldPrice:299, newPrice:119, stock:4, image:"https://images.unsplash.com/photo-1594938298603-c8148c4dae35?w=400&h=600&fit=crop", badge:"-60%", isNew:true },
+            { id:6, name:"Pull torsadé en laine mérinos", brand:"Polo Ralph Lauren", category:"homme", oldPrice:165, newPrice:82, stock:6, image:"https://images.unsplash.com/photo-1576566588028-4147f3842f27?w=400&h=600&fit=crop", badge:"-50%", isNew:false },
+            { id:7, name:"Ensemble jogging premium", brand:"Nike", category:"enfant", oldPrice:65, newPrice:26, stock:12, image:"https://images.unsplash.com/photo-1519238263530-99bdd11df2ea?w=400&h=600&fit=crop", badge:"-60%", isNew:true },
+            { id:8, name:"Robe de soirée en satin noir", brand:"Maje", category:"femme", oldPrice:325, newPrice:130, stock:1, image:"https://images.unsplash.com/photo-1490481651871-ab68de25d43d?w=400&h=600&fit=crop", badge:"-60%", isNew:false },
+            { id:9, name:"Chemise oxford slim fit", brand:"Tommy Hilfiger", category:"homme", oldPrice:89, newPrice:44, stock:9, image:"https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?w=400&h=600&fit=crop", badge:"-50%", isNew:true },
+            { id:10, name:"Doudoune légère matelassée", brand:"Moncler", category:"enfant", oldPrice:350, newPrice:140, stock:3, image:"https://images.unsplash.com/photo-1545594861-3bef43ff22f7?w=400&h=600&fit=crop", badge:"-60%", isNew:false },
+            { id:11, name:"Sac porté épaule en cuir", brand:"Longchamp", category:"femme", oldPrice:280, newPrice:112, stock:5, image:"https://images.unsplash.com/photo-1584917865442-de89df76afd3?w=400&h=600&fit=crop", badge:"-60%", isNew:true },
+            { id:12, name:"Jean 501 original fit", brand:"Levi's", category:"homme", oldPrice:110, newPrice:55, stock:7, image:"https://images.unsplash.com/photo-1542272454315-4c01d7abdf4a?w=400&h=600&fit=crop", badge:"-50%", isNew:false }
+        ];
+
+        // Traductions alignées avec le fichier traduction.json fourni
+        const translations = {
+            fr: {
+                modal: { welcome:"Bienvenue sur Nex Prime", selectCountry:"Sélectionnez votre pays de livraison pour continuer", labelCountry:"Votre pays", placeholder:"Sélectionnez votre pays", accessBtn:"Accéder au site", error:"Veuillez sélectionner un pays" },
+                zoneError: { title:"Zone non disponible", desc:"Nex Prime livre uniquement au <strong>Maroc</strong> pour le moment.<br>Nous travaillons à étendre nos livraisons à d'autres pays.", back:"Changer de pays" },
+                nav: { home:"Accueil", women:"Femme", men:"Homme", kids:"Enfant", collection:"Collection", cart:"Panier" },
+                hero: { label:"Déstockage Premium", title:"Grandes marques européennes à prix d'exception", subtitle:"Découvrez notre sélection de surplus de stock neuf avec étiquette. Jusqu'à -70% sur les plus grandes marques.", cta:"Découvrir la collection", secondary:"Voir les promotions", stat1_label:"Réduction max", stat2_label:"Authentique", stat3_label:"Avec étiquette" },
+                banner: { delivery:"Livraison rapide au Maroc", authentic:"Produits 100% authentiques", discount:"Jusqu'à -70% de réduction", brands:"Grandes marques européennes" },
+                categories: { label:"Nos Univers", title:"Parcourir par catégorie", subtitle:"Une sélection rigoureuse de pièces uniques en déstockage", men:"Homme", men_desc:"Élégance masculine", men_discount:"Jusqu'à -60%", women:"Femme", women_desc:"Mode féminine", women_discount:"Jusqu'à -65%", kids:"Enfant", kids_desc:"Petites tenues", kids_discount:"Jusqu'à -70%" },
+                featured: { label:"Sélection", title:"Nos coups de cœur", subtitle:"Les pièces les plus demandées", cta:"Voir toute la collection" },
+                whyUs: { label:"Nos engagements", title:"Pourquoi nous choisir ?", subtitle:"La qualité premium accessible grâce au déstockage", f1:"100% Authentique", f1d:"Chaque produit est vérifié et certifié par nos experts qualité", f2:"Neuf avec étiquette", f2d:"Jamais porté, dans son emballage d'origine avec étiquettes", f3:"Importé d'Europe", f3d:"Surplus de stock directement issus des grandes maisons", f4:"Prix d'exception", f4d:"Jusqu'à -70% sur les collections des saisons passées" },
+                products: { page_title:"Toute la collection", filters:{ all:"Tous", women:"Femme", men:"Homme", kids:"Enfant", promo:"-50% et plus" }, stock_warning:"Plus que {stock} en stock", badge_new:"New", badge_stock:"Limité", no_restock:"Ce produit ne sera pas réapprovisionné", add_to_cart:"Ajouter au panier", authentic:"Produit 100% authentique", authentic_desc:"Vérifié • Importé d'Europe • Neuf avec étiquettes", description:"Description", description_text:"Produit neuf avec étiquette, issu de surplus de stock de grandes marques européennes.", save:"Économisez {amount}€", left_stock:"Plus que {stock} exemplaires", quantity:"Quantité :" },
+                cart: { title:"Votre panier", empty:"Votre panier est vide", savings:"Vous économisez {amount}€", total:"Total TTC", checkout:"Finaliser la commande", secure:"Paiement 100% sécurisé", added:"Produit ajouté", updated:"Quantité mise à jour", removed:"Produit retiré", stock_error:"Stock insuffisant" },
+                order: { modalTitle:"Passer commande", recapTitle:"Récapitulatif", totalLabel:"Total à payer", deliveryNote:"Paiement à la livraison uniquement. Vous payez en cash à la réception de votre colis.", coords:"Vos coordonnées", firstName:"Prénom", lastName:"Nom", phone:"Téléphone", addressTitle:"Adresse de livraison", city:"Ville", address:"Adresse complète", notes:"Notes / Instructions (optionnel)", submit:"Confirmer la commande", confirmTitle:"Commande confirmée !", thanks:"Merci", confirmMessage:"votre commande a bien été enregistrée.", confirmContact:"Notre équipe vous contactera sous <strong>24h</strong> pour confirmer la livraison.", whatsappHint:"Envoyez votre commande via WhatsApp pour un traitement plus rapide :", whatsappBtn:"Envoyer sur WhatsApp", closeConfirm:"Retour à la boutique", errors:{ required:"Champ requis", invalidPhone:"Numéro invalide" } },
+                footer: { brand_desc:"Votre destination privilégiée pour le déstockage de grandes marques européennes. Qualité premium, prix exceptionnels.", explore:"Explorer", home:"Accueil", collection:"Collection", new:"Nouveautés", bestsellers:"Best-sellers", help:"Aide", delivery:"Livraison", returns:"Retours", size_guide:"Guide tailles", contact:"Contact", legal:"Légal", terms:"CGV", privacy:"Confidentialité", legal_notice:"Mentions légales", copyright:"Tous droits réservés", footer_text:"Déstockage de surplus de stock • Produits 100% neufs et authentiques" },
+                notifications: { welcome:"Bienvenue au Maroc", welcome_text:"Vous avez accès à toute la collection Nex Prime !" }
+            },
+            en: {
+                modal: { welcome:"Welcome to Nex Prime", selectCountry:"Select your delivery country to continue", labelCountry:"Your country", placeholder:"Select your country", accessBtn:"Enter the site", error:"Please select a country" },
+                zoneError: { title:"Area not available", desc:"Nex Prime currently ships only to <strong>Morocco</strong>.<br>We are working on expanding deliveries to other countries.", back:"Change country" },
+                nav: { home:"Home", women:"Women", men:"Men", kids:"Kids", collection:"Collection", cart:"Cart" },
+                hero: { label:"Premium Clearance", title:"European luxury brands at exceptional prices", subtitle:"Discover our selection of new stock surplus with tags. Up to -70% off on major brands.", cta:"Discover the collection", secondary:"View deals", stat1_label:"Max discount", stat2_label:"Authentic", stat3_label:"With tags" },
+                banner: { delivery:"Fast delivery in Morocco", authentic:"100% authentic products", discount:"Up to -70% off", brands:"Major European brands" },
+                categories: { label:"Our Worlds", title:"Browse by category", subtitle:"A rigorous selection of unique clearance pieces", men:"Men", men_desc:"Masculine elegance", men_discount:"Up to -60%", women:"Women", women_desc:"Women's fashion", women_discount:"Up to -65%", kids:"Kids", kids_desc:"Little outfits", kids_discount:"Up to -70%" },
+                featured: { label:"Selection", title:"Our favorites", subtitle:"The most requested pieces", cta:"View all collection" },
+                whyUs: { label:"Our commitments", title:"Why choose us?", subtitle:"Premium quality accessible through clearance", f1:"100% Authentic", f1d:"Every product is verified and certified by our quality experts", f2:"New with tags", f2d:"Never worn, in original packaging with tags", f3:"Imported from Europe", f3d:"Stock surplus directly from major houses", f4:"Exceptional prices", f4d:"Up to -70% on past season collections" },
+                products: { page_title:"Full collection", filters:{ all:"All", women:"Women", men:"Men", kids:"Kids", promo:"-50% and more" }, stock_warning:"Only {stock} left in stock", badge_new:"New", badge_stock:"Limited", no_restock:"This product will not be restocked", add_to_cart:"Add to cart", authentic:"100% authentic product", authentic_desc:"Verified • Imported from Europe • New with tags", description:"Description", description_text:"New product with tags, from stock surplus of major European brands.", save:"Save {amount}€", left_stock:"Only {stock} left", quantity:"Quantity:" },
+                cart: { title:"Your cart", empty:"Your cart is empty", savings:"You save {amount}€", total:"Total incl. tax", checkout:"Checkout", secure:"100% secure payment", added:"Product added", updated:"Quantity updated", removed:"Product removed", stock_error:"Insufficient stock" },
+                order: { modalTitle:"Place order", recapTitle:"Summary", totalLabel:"Total to pay", deliveryNote:"Cash on delivery only. You pay when you receive your package.", coords:"Your details", firstName:"First name", lastName:"Last name", phone:"Phone", addressTitle:"Delivery address", city:"City", address:"Full address", notes:"Notes / Instructions (optional)", submit:"Confirm order", confirmTitle:"Order confirmed!", thanks:"Thank you", confirmMessage:"your order has been registered.", confirmContact:"Our team will contact you within <strong>24h</strong> to confirm delivery.", whatsappHint:"Send your order via WhatsApp for faster processing:", whatsappBtn:"Send on WhatsApp", closeConfirm:"Back to shop", errors:{ required:"Required field", invalidPhone:"Invalid phone number" } },
+                footer: { brand_desc:"Your premier destination for clearance of major European brands. Premium quality, exceptional prices.", explore:"Explore", home:"Home", collection:"Collection", new:"New arrivals", bestsellers:"Best-sellers", help:"Help", delivery:"Delivery", returns:"Returns", size_guide:"Size guide", contact:"Contact", legal:"Legal", terms:"Terms", privacy:"Privacy", legal_notice:"Legal notice", copyright:"All rights reserved", footer_text:"Stock surplus clearance • 100% new and authentic products" },
+                notifications: { welcome:"Welcome to Morocco", welcome_text:"You have access to the entire Nex Prime collection!" }
+            },
+            ar: {
+                modal: { welcome:"مرحباً بكم في Nex Prime", selectCountry:"اختر بلد التوصيل للمتابعة", labelCountry:"بلدك", placeholder:"اختر بلدك", accessBtn:"دخول الموقع", error:"الرجاء اختيار بلد" },
+                zoneError: { title:"منطقة غير متاحة", desc:"توصيل Nex Prime حالياً يقتصر على <strong>المغرب</strong>.<br>نعمل على توسيع الشحن إلى دول أخرى.", back:"تغيير البلد" },
+                nav: { home:"الرئيسية", women:"نسائي", men:"رجالي", kids:"أطفال", collection:"المجموعة", cart:"سلة التسوق" },
+                hero: { label:"تخفيضات فاخرة", title:"ماركات أوروبية كبرى بأسعار استثنائية", subtitle:"اكتشف مجموعتنا من فائض المخزون الجديد مع البطاقات. خصومات تصل إلى -70٪ على كبرى الماركات.", cta:"اكتشف المجموعة", secondary:"عروض التخفيضات", stat1_label:"أقصى خصم", stat2_label:"أصلي", stat3_label:"مع البطاقة" },
+                banner: { delivery:"توصيل سريع في المغرب", authentic:"منتجات أصلية 100%", discount:"خصم حتى -70%", brands:"ماركات أوروبية كبرى" },
+                categories: { label:"عوالمنا", title:"تصفح حسب الفئة", subtitle:"اختيار دقيق لقطع التخفيضات", men:"رجالي", men_desc:"أناقة رجالية", men_discount:"خصم يصل إلى -60٪", women:"نسائي", women_desc:"أزياء نسائية", women_discount:"خصم يصل إلى -65٪", kids:"أطفال", kids_desc:"ملابس صغيرة", kids_discount:"خصم يصل إلى -70٪" },
+                featured: { label:"اختيارنا", title:"المفضلة لدينا", subtitle:"القطع الأكثر طلباً", cta:"عرض المجموعة كاملة" },
+                whyUs: { label:"التزاماتنا", title:"لماذا تختارنا؟", subtitle:"جودة فاخرة متاحة من خلال التخفيضات", f1:"أصلي 100٪", f1d:"كل منتج يتم التحقق منه واعتماده من قبل خبراء الجودة لدينا", f2:"جديد مع البطاقة", f2d:"لم يُلبس أبدًا، في عبوته الأصلية مع البطاقات", f3:"مستورد من أوروبا", f3d:"فائض المخزون مباشرة من البيوت الكبرى", f4:"أسعار استثنائية", f4d:"خصم يصل إلى -70٪ على مجموعات المواسم الماضية" },
+                products: { page_title:"المجموعة كاملة", filters:{ all:"الكل", women:"نسائي", men:"رجالي", kids:"أطفال", promo:"-50٪ وأكثر" }, stock_warning:"فقط {stock} متبقي في المخزون", badge_new:"جديد", badge_stock:"محدود", no_restock:"لن يتم إعادة تخزين هذا المنتج", add_to_cart:"أضف إلى السلة", authentic:"منتج أصلي 100٪", authentic_desc:"تم التحقق • مستورد • جديد مع البطاقات", description:"الوصف", description_text:"منتج جديد من فائض مخزون ماركات أوروبية.", save:"وفر {amount}€", left_stock:"فقط {stock} متبقي", quantity:"الكمية:" },
+                cart: { title:"سلة التسوق", empty:"سلة التسوق فارغة", savings:"توفر {amount}€", total:"المجموع شامل الضريبة", checkout:"إتمام الشراء", secure:"دفع آمن 100٪", added:"تمت إضافة المنتج", updated:"تم تحديث الكمية", removed:"تمت إزالة المنتج", stock_error:"مخزون غير كاف" },
+                order: { modalTitle:"إتمام الطلب", recapTitle:"ملخص", totalLabel:"المبلغ المستحق", deliveryNote:"الدفع عند الاستلام فقط. تدفع نقداً عند استلام طردك.", coords:"معلوماتك", firstName:"الاسم الأول", lastName:"الاسم العائلي", phone:"الهاتف", addressTitle:"عنوان التوصيل", city:"المدينة", address:"العنوان الكامل", notes:"ملاحظات / تعليمات (اختياري)", submit:"تأكيد الطلب", confirmTitle:"تم تأكيد الطلب!", thanks:"شكراً", confirmMessage:"تم تسجيل طلبك بنجاح.", confirmContact:"سيتواصل معك فريقنا خلال <strong>24 ساعة</strong> لتأكيد التوصيل.", whatsappHint:"أرسل طلبك عبر واتساب لمعالجة أسرع:", whatsappBtn:"إرسال على واتساب", closeConfirm:"العودة للمتجر", errors:{ required:"حقل مطلوب", invalidPhone:"رقم هاتف غير صالح" } },
+                footer: { brand_desc:"وجهتك المفضلة لتخفيضات الماركات الأوروبية الكبرى. جودة فاخرة، أسعار استثنائية.", explore:"استكشف", home:"الرئيسية", collection:"المجموعة", new:"الوافدون الجدد", bestsellers:"الأكثر مبيعاً", help:"المساعدة", delivery:"التوصيل", returns:"الإرجاع", size_guide:"دليل المقاسات", contact:"اتصل بنا", legal:"قانوني", terms:"الشروط والأحكام", privacy:"الخصوصية", legal_notice:"إشعار قانوني", copyright:"جميع الحقوق محفوظة", footer_text:"تخفيضات فائض المخزون • منتجات جديدة وأصلية 100٪" },
+                notifications: { welcome:"مرحباً بكم في المغرب", welcome_text:"لديك حق الوصول إلى مجموعة Nex Prime بأكملها!" }
+            }
+        };
+
+        // Helper pour éviter les erreurs null
+        function safeSetText(id, text) {
+            const el = document.getElementById(id);
+            if (el) el.textContent = text;
+        }
+        function t(path, lang = currentLang) {
+            const keys = path.split('.');
+            let value = translations[lang];
+            for (let key of keys) {
+                if (value && typeof value === 'object') value = value[key];
+                else return path; // fallback
+            }
+            return value || path;
+        }
+
+        let currentLang = 'fr';
+        let cart = [];
+        let currentFilter = 'all';
+        let isAccessGranted = false;
+        window.currentProductId = null;
+
+        function validateCountry() {
+            const val = document.getElementById('countrySelect').value;
+            const err = document.getElementById('modalError');
+            if (!val) { err.classList.add('show'); setTimeout(() => err.classList.remove('show'), 2500); return; }
+            if (val === 'maroc') {
+                isAccessGranted = true;
+                document.getElementById('countryModal').classList.add('hidden');
+                document.getElementById('mainContent').classList.add('visible');
+                applyTranslations(currentLang);
+                renderPopularProducts();
+                renderAllProducts('all');
+                updateCartUI();
+                showNotification(t('notifications.welcome'), t('notifications.welcome_text'), 'success');
+            } else {
+                document.getElementById('countryModal').classList.add('hidden');
+                document.getElementById('zoneErrorOverlay').classList.add('show');
+            }
+        }
+        function closeZoneError() {
+            document.getElementById('zoneErrorOverlay').classList.remove('show');
+            document.getElementById('countrySelect').value = '';
+            document.getElementById('countryModal').classList.remove('hidden');
+        }
+
+        function applyTranslations(lang) {
+            if (!translations[lang]) return;
+            currentLang = lang;
+            document.documentElement.setAttribute('dir', lang === 'ar' ? 'rtl' : 'ltr');
+            document.documentElement.lang = lang;
+            safeSetText('currentLangLabel', lang.toUpperCase());
+
+            // Modale pays
+            safeSetText('modalWelcome', t('modal.welcome', lang));
+            safeSetText('modalSelectCountry', t('modal.selectCountry', lang));
+            safeSetText('modalLabelCountry', t('modal.labelCountry', lang));
+            safeSetText('modalPlaceholder', t('modal.placeholder', lang));
+            safeSetText('modalAccessBtn', t('modal.accessBtn', lang));
+            safeSetText('modalErrorText', t('modal.error', lang));
+
+            // Zone erreur
+            safeSetText('zoneErrorTitle', t('zoneError.title', lang));
+            document.getElementById('zoneErrorDesc').innerHTML = t('zoneError.desc', lang);
+            safeSetText('zoneErrorBack', t('zoneError.back', lang));
+
+            // Navigation
+            safeSetText('navHome', t('nav.home', lang));
+            safeSetText('navWomen', t('nav.women', lang));
+            safeSetText('navMen', t('nav.men', lang));
+            safeSetText('navKids', t('nav.kids', lang));
+            safeSetText('navCollection', t('nav.collection', lang));
+            // Mobile
+            safeSetText('mobileNavHomeText', t('nav.home', lang));
+            safeSetText('mobileNavWomenText', t('nav.women', lang));
+            safeSetText('mobileNavMenText', t('nav.men', lang));
+            safeSetText('mobileNavKidsText', t('nav.kids', lang));
+            safeSetText('mobileNavCartText', t('nav.cart', lang));
+
+            // Hero
+            safeSetText('heroLabel', t('hero.label', lang));
+            document.getElementById('heroTitle').innerHTML = t('hero.title', lang);
+            safeSetText('heroSubtitle', t('hero.subtitle', lang));
+            document.getElementById('heroCta').innerHTML = t('hero.cta', lang) + ' <i class="fas fa-arrow-right"></i>';
+            safeSetText('heroSecondaryLabel', t('hero.secondary', lang));
+            safeSetText('stat1Label', t('hero.stat1_label', lang));
+            safeSetText('stat2Label', t('hero.stat2_label', lang));
+            safeSetText('stat3Label', t('hero.stat3_label', lang));
+
+            // Bannière
+            document.querySelectorAll('.banner-item').forEach(el => {
+                const key = el.getAttribute('data-banner');
+                const txt = t(`banner.${key}`, lang);
+                if (txt && txt !== key) {
+                    const icon = el.querySelector('i').outerHTML;
+                    el.innerHTML = `${icon} ${txt}`;
+                }
+            });
+
+            // Categories
+            safeSetText('categoriesLabel', t('categories.label', lang));
+            safeSetText('categoriesTitle', t('categories.title', lang));
+            safeSetText('categoriesSubtitle', t('categories.subtitle', lang));
+            safeSetText('catMenTitle', t('categories.men', lang));
+            safeSetText('catMenDesc', t('categories.men_desc', lang));
+            safeSetText('catMenDiscount', t('categories.men_discount', lang));
+            safeSetText('catWomenTitle', t('categories.women', lang));
+            safeSetText('catWomenDesc', t('categories.women_desc', lang));
+            safeSetText('catWomenDiscount', t('categories.women_discount', lang));
+            safeSetText('catKidsTitle', t('categories.kids', lang));
+            safeSetText('catKidsDesc', t('categories.kids_desc', lang));
+            safeSetText('catKidsDiscount', t('categories.kids_discount', lang));
+
+            // Featured
+            safeSetText('featuredLabel', t('featured.label', lang));
+            safeSetText('featuredTitle', t('featured.title', lang));
+            safeSetText('featuredSubtitle', t('featured.subtitle', lang));
+            document.getElementById('featuredCta').innerHTML = t('featured.cta', lang) + ' <i class="fas fa-arrow-right"></i>';
+
+            // Why us
+            safeSetText('whyUsLabel', t('whyUs.label', lang));
+            safeSetText('whyUsTitle', t('whyUs.title', lang));
+            safeSetText('whyUsSubtitle', t('whyUs.subtitle', lang));
+            safeSetText('feature1Title', t('whyUs.f1', lang));
+            safeSetText('feature1Desc', t('whyUs.f1d', lang));
+            safeSetText('feature2Title', t('whyUs.f2', lang));
+            safeSetText('feature2Desc', t('whyUs.f2d', lang));
+            safeSetText('feature3Title', t('whyUs.f3', lang));
+            safeSetText('feature3Desc', t('whyUs.f3d', lang));
+            safeSetText('feature4Title', t('whyUs.f4', lang));
+            safeSetText('feature4Desc', t('whyUs.f4d', lang));
+
+            // Products page
+            safeSetText('pageTitle', t('products.page_title', lang));
+            const filterBtns = document.querySelectorAll('.filter-btn span');
+            const fk = t('products.filters', lang);
+            if (filterBtns[0]) filterBtns[0].textContent = fk.all;
+            if (filterBtns[1]) filterBtns[1].textContent = fk.women;
+            if (filterBtns[2]) filterBtns[2].textContent = fk.men;
+            if (filterBtns[3]) filterBtns[3].textContent = fk.kids;
+            if (filterBtns[4]) filterBtns[4].textContent = fk.promo;
+
+            // Cart
+            safeSetText('cartTitle', t('cart.title', lang));
+            safeSetText('cartEmptyText', t('cart.empty', lang));
+            safeSetText('cartSavingsLabel', t('cart.savings', lang).replace('{amount}', ''));
+            safeSetText('cartTotalLabel', t('cart.total', lang));
+            safeSetText('checkoutBtnText', t('cart.checkout', lang));
+            safeSetText('secureNote', t('cart.secure', lang));
+
+            // Order modal
+            safeSetText('orderModalTitle', t('order.modalTitle', lang));
+            safeSetText('recapTitle', t('order.recapTitle', lang));
+            safeSetText('orderTotalLabel', t('order.totalLabel', lang));
+            safeSetText('deliveryNoteText', t('order.deliveryNote', lang));
+            safeSetText('formSectionCoords', t('order.coords', lang));
+            safeSetText('labelFirstName', t('order.firstName', lang));
+            safeSetText('labelLastName', t('order.lastName', lang));
+            safeSetText('labelPhone', t('order.phone', lang));
+            safeSetText('formSectionAddress', t('order.addressTitle', lang));
+            safeSetText('labelCity', t('order.city', lang));
+            safeSetText('labelAddress', t('order.address', lang));
+            safeSetText('labelNotes', t('order.notes', lang));
+            safeSetText('submitOrderBtnText', t('order.submit', lang));
+            safeSetText('errFirstName', t('order.errors.required', lang));
+            safeSetText('errLastName', t('order.errors.required', lang));
+            safeSetText('errPhone', t('order.errors.invalidPhone', lang));
+            safeSetText('errCity', t('order.errors.required', lang));
+            safeSetText('errAddress', t('order.errors.required', lang));
+            safeSetText('confirmTitle', t('order.confirmTitle', lang));
+            safeSetText('confirmThanks', t('order.thanks', lang));
+            safeSetText('confirmMessage', t('order.confirmMessage', lang));
+            document.getElementById('confirmContact').innerHTML = t('order.confirmContact', lang);
+            safeSetText('confirmWhatsappHint', t('order.whatsappHint', lang));
+            safeSetText('whatsappBtnText', t('order.whatsappBtn', lang));
+            safeSetText('closeConfirmBtnText', t('order.closeConfirm', lang));
+
+            // Footer (toutes les clés, y compris footer_text)
+            safeSetText('footerBrandDesc', t('footer.brand_desc', lang));
+            safeSetText('footerExplore', t('footer.explore', lang));
+            safeSetText('footerHomeText', t('footer.home', lang));
+            safeSetText('footerCollectionText', t('footer.collection', lang));
+            safeSetText('footerNew', t('footer.new', lang));
+            safeSetText('footerBestsellers', t('footer.bestsellers', lang));
+            safeSetText('footerHelp', t('footer.help', lang));
+            safeSetText('footerDelivery', t('footer.delivery', lang));
+            safeSetText('footerReturns', t('footer.returns', lang));
+            safeSetText('footerSizeGuide', t('footer.size_guide', lang));
+            safeSetText('footerContact', t('footer.contact', lang));
+            safeSetText('footerLegal', t('footer.legal', lang));
+            safeSetText('footerTerms', t('footer.terms', lang));
+            safeSetText('footerPrivacy', t('footer.privacy', lang));
+            safeSetText('footerLegalNotice', t('footer.legal_notice', lang));
+            safeSetText('footerCopyright', t('footer.copyright', lang));
+            safeSetText('footerBadgeAuth', t('footer.badgeAuth' in t('footer', lang) ? 'footer.badgeAuth' : 'footer.footer_text', lang));
+            safeSetText('footerBadgePayment', t('footer.badgePayment' in t('footer', lang) ? 'footer.badgePayment' : 'footer.footer_text', lang));
+
+            // Mise à jour des rendus dynamiques
+            renderPopularProducts();
+            renderAllProducts(currentFilter);
+            if (window.currentProductId) showProductDetail(window.currentProductId);
+            updateCartUI();
+        }
+
+        function showPage(page) {
+            ['home', 'products', 'product-detail'].forEach(p => document.getElementById('page-' + p).classList.add('hidden'));
+            document.getElementById('page-' + page).classList.remove('hidden');
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+        function filterCategory(cat) { currentFilter = cat; showPage('products'); updateFilterBtns(cat); renderAllProducts(cat); }
+        function filterProducts(filter) { currentFilter = filter; updateFilterBtns(filter); renderAllProducts(filter); }
+        function updateFilterBtns(active) { document.querySelectorAll('.filter-btn').forEach(b => b.classList.toggle('active', b.getAttribute('data-filter') === active)); }
+        function toggleMobileMenu() { document.getElementById('mobileMenu').classList.toggle('active'); }
+        function toggleCart() { document.getElementById('cartSidebar').classList.toggle('active'); document.getElementById('cartOverlay').classList.toggle('active'); }
+
+        function createProductCard(p) {
+            const lang = currentLang;
+            const swText = t('products.stock_warning', lang).replace('{stock}', p.stock);
+            const stockWarn = p.stock <= 3 ? `<div class="stock-pill"><i class="fas fa-clock"></i> ${swText}</div>` : '';
+            const newBadge = p.isNew ? `<span class="badge badge-new"><i class="fas fa-star"></i> ${t('products.badge_new', lang)}</span>` : '';
+            const limitedBadge = p.stock <= 3 ? `<span class="badge badge-limited"><i class="fas fa-exclamation"></i> ${t('products.badge_stock', lang)}</span>` : '';
+            return `<div class="product-card" onclick="showProductDetail(${p.id})"><div class="product-img-wrap"><img src="${p.image}" alt="${p.name}" loading="lazy"><div class="product-badges"><span class="badge badge-discount">${p.badge}</span>${newBadge}${limitedBadge}</div></div><div class="product-body"><div class="product-brand">${p.brand}</div><div class="product-name">${p.name}</div><div class="product-pricing"><span class="old-price">${p.oldPrice}€</span><span class="new-price">${p.newPrice}€</span></div>${stockWarn}</div></div>`;
+        }
+        function renderPopularProducts() { const c = document.getElementById('popularProducts'); if (c) c.innerHTML = products.slice(0, 4).map(createProductCard).join(''); }
+        function renderAllProducts(filter = 'all') {
+            const c = document.getElementById('allProducts'); if (!c) return;
+            let list = products;
+            if (filter === 'promo') list = products.filter(p => ((p.oldPrice - p.newPrice) / p.oldPrice) >= 0.5);
+            else if (filter !== 'all') list = products.filter(p => p.category === filter);
+            c.innerHTML = list.length ? list.map(createProductCard).join('') : '<p style="padding:32px;color:var(--muted);">Aucun produit.</p>';
+        }
+
+        function showProductDetail(id) {
+            window.currentProductId = id;
+            const p = products.find(x => x.id === id); if (!p) return;
+            const lang = currentLang;
+            const r = Math.round(((p.oldPrice - p.newPrice) / p.oldPrice) * 100);
+            const saveText = t('products.save', lang).replace('{amount}', p.oldPrice - p.newPrice);
+            const leftText = t('products.left_stock', lang).replace('{stock}', p.stock);
+            safeSetText('breadcrumbProduct', p.name);
+            document.getElementById('productDetail').innerHTML = `
+                <div class="detail-gallery"><img src="${p.image}" alt="${p.name}"></div>
+                <div class="detail-info">
+                    <div class="detail-badges"><span class="badge badge-discount">${p.badge}</span>${p.isNew ? `<span class="badge badge-new"><i class="fas fa-star"></i> ${t('products.badge_new', lang)}</span>` : ''}</div>
+                    <div class="detail-brand">${p.brand}</div>
+                    <h1 class="detail-name">${p.name}</h1>
+                    <div class="price-box"><div class="price-row"><span class="price-old">${p.oldPrice}€</span><span class="price-new">${p.newPrice}€</span><span class="price-badge">-${r}%</span></div><div class="price-saving"><i class="fas fa-piggy-bank"></i> ${saveText}</div></div>
+                    ${p.stock <= 3 ? `<div class="stock-alert"><i class="fas fa-exclamation-triangle"></i><span>${leftText}</span></div>` : ''}
+                    <div class="authenticity-box"><div class="auth-icon"><i class="fas fa-shield-alt"></i></div><div><div class="auth-title"><i class="fas fa-check-circle"></i> ${t('products.authentic', lang)}</div><div class="auth-desc">${t('products.authentic_desc', lang)}</div></div></div>
+                    <div class="qty-box"><span class="qty-label">${t('products.quantity', lang)}</span><div class="qty-controls"><button class="qty-btn" onclick="updateQty(-1)"><i class="fas fa-minus"></i></button><input type="number" id="qtyInput" class="qty-input" value="1" min="1" max="${p.stock}" readonly><button class="qty-btn" onclick="updateQty(1,${p.stock})"><i class="fas fa-plus"></i></button></div></div>
+                    <button class="add-cart-btn" onclick="addToCart(${p.id})"><i class="fas fa-shopping-bag"></i> ${t('products.add_to_cart', lang)}</button>
+                    <p class="no-restock-note"><i class="fas fa-info-circle"></i> ${t('products.no_restock', lang)}</p>
+                </div>`;
+            showPage('product-detail');
+        }
+        function updateQty(change, max) {
+            const input = document.getElementById('qtyInput'); if (!input) return;
+            let v = parseInt(input.value) + change; if (v < 1) v = 1; if (max && v > max) v = max;
+            input.value = v;
+        }
+
+        function addToCart(pid) {
+            const p = products.find(x => x.id === pid);
+            const qInput = document.getElementById('qtyInput');
+            const qty = qInput ? parseInt(qInput.value) : 1;
+            const lang = currentLang;
+            const existing = cart.find(i => i.id === pid);
+            if (existing) { if (existing.quantity + qty <= p.stock) { existing.quantity += qty; } else { showNotification(t('cart.stock_error', lang), '', 'error'); return; } }
+            else { cart.push({ ...p, quantity: qty }); }
+            updateCartUI(); showNotification(t('cart.added', lang), `${p.brand} — ${p.name}`, 'success'); toggleCart();
+        }
+        function removeFromCart(pid) { cart = cart.filter(i => i.id !== pid); updateCartUI(); showNotification(t('cart.removed', currentLang), '', 'success'); }
+        function updateCartItemQty(pid, change) {
+            const item = cart.find(i => i.id === pid); const p = products.find(x => x.id === pid); if (!item) return;
+            const nq = item.quantity + change;
+            if (nq > 0 && nq <= p.stock) { item.quantity = nq; updateCartUI(); } else if (nq <= 0) { removeFromCart(pid); }
+        }
+        function updateCartUI() {
+            const count = cart.reduce((s, i) => s + i.quantity, 0);
+            document.getElementById('cartCount').textContent = count;
+            const listEl = document.getElementById('cartItemsList');
+            const footer = document.getElementById('cartFooter');
+            const lang = currentLang;
+            if (cart.length === 0) { listEl.innerHTML = `<div class="cart-empty"><i class="fas fa-shopping-bag"></i><p>${t('cart.empty', lang)}</p></div>`; footer.style.display = 'none'; return; }
+            listEl.innerHTML = cart.map(item => `
+                <div class="cart-item"><div class="cart-item-img"><img src="${item.image}" alt="${item.name}"></div><div class="cart-item-info"><div class="cart-item-brand">${item.brand}</div><div class="cart-item-name">${item.name}</div><div class="cart-item-price">${item.newPrice}€</div><div class="cart-item-controls"><button class="cart-qty-btn" onclick="updateCartItemQty(${item.id},-1)"><i class="fas fa-minus"></i></button><span class="cart-qty-num">${item.quantity}</span><button class="cart-qty-btn" onclick="updateCartItemQty(${item.id},1)"><i class="fas fa-plus"></i></button></div></div><button class="remove-btn" onclick="removeFromCart(${item.id})"><i class="fas fa-trash"></i></button></div>`).join('');
+            footer.style.display = 'block';
+            const total = cart.reduce((s, i) => s + (i.newPrice * i.quantity), 0);
+            const origTotal = cart.reduce((s, i) => s + (i.oldPrice * i.quantity), 0);
+            document.getElementById('cartTotal').textContent = total.toFixed(2) + '€';
+            document.getElementById('cartSavingsText').textContent = (origTotal - total).toFixed(2) + '€';
+        }
+
+        function openOrderModal() {
+            if (cart.length === 0) return;
+            document.getElementById('orderRecapItems').innerHTML = cart.map(i => `<div class="order-recap-item"><span>${i.brand} — ${i.name} × ${i.quantity}</span><span>${(i.newPrice * i.quantity).toFixed(2)}€</span></div>`).join('');
+            document.getElementById('orderTotalAmount').textContent = cart.reduce((s, i) => s + (i.newPrice * i.quantity), 0).toFixed(2) + '€';
+            ['fieldFirstName','fieldLastName','fieldPhone','fieldCity','fieldAddress','fieldNotes'].forEach(id => { const el = document.getElementById(id); if(el) { el.value = ''; el.classList.remove('error'); } });
+            ['errFirstName','errLastName','errPhone','errCity','errAddress'].forEach(id => { const el = document.getElementById(id); if(el) el.classList.remove('show'); });
+            document.getElementById('orderFormStep').style.display = 'block';
+            document.getElementById('orderConfirmStep').classList.remove('show');
+            toggleCart();
+            document.getElementById('orderModalOverlay').classList.add('show');
+        }
+        function closeOrderModal() { document.getElementById('orderModalOverlay').classList.remove('show'); }
+
+        function submitOrder() {
+            let valid = true;
+            [{ id:'fieldFirstName',err:'errFirstName' },{ id:'fieldLastName',err:'errLastName' },{ id:'fieldCity',err:'errCity' },{ id:'fieldAddress',err:'errAddress' }].forEach(f => {
+                const el = document.getElementById(f.id), errEl = document.getElementById(f.err);
+                if (!el.value.trim()) { el.classList.add('error'); errEl.classList.add('show'); valid = false; }
+                else { el.classList.remove('error'); errEl.classList.remove('show'); }
+            });
+            const phone = document.getElementById('fieldPhone').value.trim();
+            const phoneErr = document.getElementById('errPhone');
+            if (!/^[0-9+\s\-]{8,15}$/.test(phone)) { document.getElementById('fieldPhone').classList.add('error'); phoneErr.classList.add('show'); valid = false; }
+            else { document.getElementById('fieldPhone').classList.remove('error'); phoneErr.classList.remove('show'); }
+            if (!valid) return;
+
+            const orderNum = 'NP-' + Math.floor(100000 + Math.random() * 900000);
+            const firstName = document.getElementById('fieldFirstName').value.trim();
+            const lastName = document.getElementById('fieldLastName').value.trim();
+            const city = document.getElementById('fieldCity').value.trim();
+            const address = document.getElementById('fieldAddress').value.trim();
+            const notes = document.getElementById('fieldNotes').value.trim();
+            const total = cart.reduce((s, i) => s + (i.newPrice * i.quantity), 0);
+
+            document.getElementById('confirmName').textContent = firstName;
+            document.getElementById('confirmOrderNumber').textContent = orderNum;
+            document.getElementById('orderFormStep').style.display = 'none';
+            document.getElementById('orderConfirmStep').classList.add('show');
+
+            const cartLines = cart.map(i => `• ${i.brand} — ${i.name} (×${i.quantity}) : ${(i.newPrice * i.quantity).toFixed(2)}€`).join('\n');
+            const msg = [`🛍️ *Nex Prime*`,`📋 ${orderNum}`,``,`👤 ${firstName} ${lastName}`,`📞 ${phone}`,`📍 ${city}`,`🏠 ${address}`,notes ? `📝 ${notes}` : '',``,`🛒 :`,cartLines,``,`💰 ${total.toFixed(2)}€`].filter(Boolean).join('\n');
+            document.getElementById('whatsappBtn').href = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(msg)}`;
+        }
+        function closeConfirmation() { closeOrderModal(); cart = []; updateCartUI(); showPage('home'); }
+
+        function showNotification(title, msg, type = 'success') {
+            const el = document.getElementById('notification');
+            safeSetText('notifTitle', title);
+            safeSetText('notifText', msg);
+            el.querySelector('.notif-icon i').className = type === 'success' ? 'fas fa-check' : 'fas fa-exclamation';
+            el.className = 'notification ' + type; void el.offsetWidth; el.classList.add('show');
+            setTimeout(() => el.classList.remove('show'), 3200);
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            document.getElementById('validateBtn').addEventListener('click', validateCountry);
+            document.getElementById('countrySelect').addEventListener('keydown', e => { if (e.key === 'Enter') validateCountry(); });
+            document.getElementById('closeZoneBtn').addEventListener('click', closeZoneError);
+            document.getElementById('logoLink').addEventListener('click', e => { e.preventDefault(); showPage('home'); });
+            document.getElementById('navHome').addEventListener('click', e => { e.preventDefault(); showPage('home'); });
+            document.getElementById('navWomen').addEventListener('click', e => { e.preventDefault(); filterCategory('femme'); });
+            document.getElementById('navMen').addEventListener('click', e => { e.preventDefault(); filterCategory('homme'); });
+            document.getElementById('navKids').addEventListener('click', e => { e.preventDefault(); filterCategory('enfant'); });
+            document.getElementById('navCollection').addEventListener('click', e => { e.preventDefault(); showPage('products'); });
+            document.getElementById('mobileMenuBtn').addEventListener('click', toggleMobileMenu);
+            document.getElementById('closeMobileMenuBtn').addEventListener('click', toggleMobileMenu);
+            document.getElementById('mobileNavHome').addEventListener('click', e => { e.preventDefault(); showPage('home'); toggleMobileMenu(); });
+            document.getElementById('mobileNavWomen').addEventListener('click', e => { e.preventDefault(); filterCategory('femme'); toggleMobileMenu(); });
+            document.getElementById('mobileNavMen').addEventListener('click', e => { e.preventDefault(); filterCategory('homme'); toggleMobileMenu(); });
+            document.getElementById('mobileNavKids').addEventListener('click', e => { e.preventDefault(); filterCategory('enfant'); toggleMobileMenu(); });
+            document.getElementById('mobileNavCart').addEventListener('click', e => { e.preventDefault(); toggleCart(); toggleMobileMenu(); });
+            document.getElementById('heroCta').addEventListener('click', e => { e.preventDefault(); showPage('products'); });
+            document.getElementById('heroSecondary').addEventListener('click', e => { e.preventDefault(); filterProducts('promo'); });
+            document.getElementById('featuredCta').addEventListener('click', e => { e.preventDefault(); showPage('products'); });
+            document.getElementById('categoryMen').addEventListener('click', () => filterCategory('homme'));
+            document.getElementById('categoryWomen').addEventListener('click', () => filterCategory('femme'));
+            document.getElementById('categoryKids').addEventListener('click', () => filterCategory('enfant'));
+            document.querySelectorAll('.filter-btn').forEach(btn => btn.addEventListener('click', () => filterProducts(btn.getAttribute('data-filter'))));
+            document.getElementById('searchBtn').addEventListener('click', () => showPage('products'));
+            document.getElementById('cartBtn').addEventListener('click', toggleCart);
+            document.getElementById('closeCartBtn').addEventListener('click', toggleCart);
+            document.getElementById('cartOverlay').addEventListener('click', toggleCart);
+            document.getElementById('checkoutBtn').addEventListener('click', openOrderModal);
+            document.getElementById('closeOrderModalBtn').addEventListener('click', closeOrderModal);
+            document.getElementById('submitOrderBtn').addEventListener('click', submitOrder);
+            document.getElementById('closeConfirmBtn').addEventListener('click', closeConfirmation);
+            document.getElementById('orderModalOverlay').addEventListener('click', e => { if (e.target === document.getElementById('orderModalOverlay')) closeOrderModal(); });
+            document.getElementById('breadcrumbHome').addEventListener('click', e => { e.preventDefault(); showPage('home'); });
+            document.getElementById('breadcrumbCollection').addEventListener('click', e => { e.preventDefault(); showPage('products'); });
+            document.getElementById('footerHome').addEventListener('click', e => { e.preventDefault(); showPage('home'); });
+            document.getElementById('footerCollection').addEventListener('click', e => { e.preventDefault(); showPage('products'); });
+            document.querySelectorAll('.lang-option').forEach(opt => opt.addEventListener('click', () => applyTranslations(opt.getAttribute('data-lang'))));
+            window.addEventListener('scroll', () => { document.querySelector('header').style.boxShadow = window.pageYOffset > 60 ? '0 2px 20px rgba(0,0,0,.08)' : 'none'; });
+            renderPopularProducts(); renderAllProducts(); updateCartUI();
+        });
+    </script>
+</body>
+                      </html>
